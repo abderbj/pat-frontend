@@ -1,0 +1,19 @@
+.EventsCalendarPage {
+  display: grid;
+    grid-template-columns: 2fr 5fr;
+    
+  
+}
+.EventsCalendarComponent {
+  width: 100%;
+}
+@media  (max-width: 768px) {
+  .EventsCalendarPage {
+    display: block;
+  }
+  .EventsCalendarComponent {
+    width: 100%;
+    margin: 0 ;
+  }
+  
+}

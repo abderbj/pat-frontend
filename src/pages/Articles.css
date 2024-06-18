@@ -1,0 +1,26 @@
+.ArticlesPage {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 20px; 
+    margin-top: 50px;
+    background-color: #f4f6f8;
+}
+
+.currentArticle {
+    flex: 1; 
+    position: sticky; 
+    top: 0; 
+}
+
+.ArticleListContainer {
+    
+    flex: 1; 
+}
+@media (max-width: 768px){
+    .ArticlesPage {
+        display: block;
+    }
+    .currentArticle {
+        position: relative;
+    }
+}

@@ -1,0 +1,30 @@
+/* StatusButton.css */
+.status-button {
+    padding: 0 20px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+    width:    93px;
+    height: 27px;
+    cursor: pointer;
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-size: 14px;
+    line-height: 19px;
+}
+
+.completed { 
+    color: #00B69B;
+    background-color: #c5e7e0;
+}
+.rejected {
+    background-color: #F9AFB8;
+    color:#EF3826;
+}
+.pending {
+    background-color:#faedd1;
+    color: #FFA756;
+}
+.in-delivery { background-color: #c7a6d6; 
+    color: #9409d4;
+}

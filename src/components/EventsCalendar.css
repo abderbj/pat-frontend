@@ -1,0 +1,128 @@
+/* Custom Toolbar Styling */
+.custom-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    height: 100px;
+  }
+  
+  .navigation-buttons {
+    display: flex ;
+    margin-right: -90px ;    
+  }
+  
+  .nav-button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 0 10px;
+  }
+  
+  .current-date {
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .today-button {
+    background: none;
+    font-size: 14px;
+    line-height: 19.1px;
+    text-align: left;
+    color:rgb(54, 57, 60);
+    letter-spacing: 0.8px;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .view-buttons {
+    display: flex;
+  }
+  
+  .view-button {
+    background: none;
+    border: 0.6px solid #ccc;
+    padding: 5px 10px;
+    cursor: pointer;
+    border: 0.6px solid rgba(213, 213, 213, 1);
+    margin-left: -0.6px;
+  }
+  .view-button:first-child {
+    border-radius: 10px 0 0 10px;
+  }
+  .view-button:last-child {
+    border-radius:0 10px 10px 0;
+  }
+  .view-button.active {
+    background-color: rgba(27, 165, 225, 1);
+    color: white;
+    border-color: #007bff;
+  }
+  
+
+
+    /* Custom styling for events that don't belong to the selected month */
+  .rbc-day-bg.rbc-off-range-bg {
+    background-color: white;
+    position: relative;
+  }
+  .rbc-day-bg.rbc-off-range-bg:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    pointer-events: none;
+    background: repeating-linear-gradient(
+                      -30deg,
+                      #d4d4d4,
+                      rgba(117, 210, 117, 1) 0.5px,
+                      transparent 0.5px,
+                      transparent 15px
+                    );
+  }
+
+
+  /* Styling for Day Names */
+.rbc-header {
+    background-color: #e9ecef; 
+    color: #343a40;            
+    font-weight: bold;         
+    text-align: center;        
+    padding: 10px 0;           
+    border-bottom: 1px solid #ddd; 
+  }
+  
+  .rbc-header + .rbc-header {
+    border-left: none; 
+  }
+  
+  .rbc-header {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+  }
+  .rbc-header:first-child {
+    border-radius: 10px 0 0 0;
+  }
+  .rbc-month-view{
+    border:  0.6px solid #e9ecef;
+    border-radius: 11px;
+  }
+  /* events styles */
+  
+  .rbc-event{
+    padding: 0px;
+  }
+  .rbc-event.rbc-selected, .rbc-day-slot .rbc-selected.rbc-background-event{
+    opacity: 0.9;
+    background-color: rgba(255, 255, 255, 0); /*alter this to modify color when selected*/
+  }
+  
+  
