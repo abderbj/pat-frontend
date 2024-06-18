@@ -5,7 +5,7 @@ import { DataGrid } from '@mui/x-data-grid';
 
 export default function Table(props) {
     const columns = props.columns;
-    const rows = props.rows.map(row => ({
+    const rows = props.rows.rows.map(row => ({
         ...row,
         status: row.status || 'En attente',
     }));

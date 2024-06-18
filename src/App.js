@@ -14,7 +14,7 @@ import Chart from "./components/Chart";
 import ToDoPage from "./pages/ToDo";
 import Dashboard from './DashboardLayout/Dashboard';
 import Animals from './pages/Animals';
-
+import CommandsFrontPage from './components/CommandsFrontPage';
 const theme = createTheme({
   typography: {
     fontFamily: "Manrope, sans-serif",
@@ -366,7 +366,7 @@ function App() {
       {/* <Chart props={props} /> */}
       {/* <EventsCalendar />  */}
       {/* <EventsCalendarPage events={events} /> */}
-      <ThemeProvider theme={theme}>
+      {/*<ThemeProvider theme={theme}>
         <CssBaseline />
         <Router>
           <Routes>
@@ -383,7 +383,8 @@ function App() {
             <Route path="/animals" element={<Animals animals={animals}/>} />
           </Routes>
         </Router>
-      </ThemeProvider>
+      </ThemeProvider>*/}
+        <CommandsFrontPage />
     </div>
   );
 }
