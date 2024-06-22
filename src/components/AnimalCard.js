@@ -3,9 +3,13 @@ import { Box,Typography,Button,Paper,Card, CardContent,CardMedia} from '@mui/mat
 import FemaleIcon from '@mui/icons-material/Female';
 import MaleIcon from '@mui/icons-material/Male';
 import defaultAnimalImage from '../assets/animal-default.png';
-export default function AnimalCard({animalData}){
+export default function AnimalCard({animalData,setSelectedAnimal}){
+    function editAnimal(){
+        setSelectedAnimal(animalData.id);
+    }
+
     return(
-        <Card elevation={10} sx={{borderRadius:3,minWidth:'150px'}} variant='elevation'>
+        <Card onClick={editAnimal} elevation={10} sx={{borderRadius:3,minWidth:'150px'}} variant='elevation'>
             <CardMedia image={defaultAnimalImage}
                         sx={{height:100}}/>
             <CardContent>

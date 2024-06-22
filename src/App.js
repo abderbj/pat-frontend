@@ -302,72 +302,120 @@ function App() {
     {id:0,
       name:'PETER',
       isMale:false,
-      image:'/src/assets/animal-default.png'
+      image:'/src/assets/animal-default.png',
+      species:'DOG',
+      race:'GOLDEN RETRIVER',
+      ageInYears:3,
+      state:'STÉRILISÉ'
     },
     {id:1,
       name:'ZION',
       isMale:true,
-      image:'/src/assets/animal-default.png'
+      image:'/src/assets/animal-default.png',
+      species:'DOG',
+      race:'GOLDEN RETRIVER',
+      ageInYears:3,
+      state:'STÉRILISÉ'
     },
     {id:2,
       name:'ARISTO',
       isMale:false,
-      image:'/src/assets/animal-default.png'
+      image:'/src/assets/animal-default.png',
+      species:'DOG',
+      race:'GOLDEN RETRIVER',
+      ageInYears:3,
+      state:'STÉRILISÉ'
     },
     {id:3,
       name:'YUKI',
       isMale:false,
-      image:'/src/assets/animal-default.png'
+      image:'/src/assets/animal-default.png',
+      species:'DOG',
+      race:'GOLDEN RETRIVER',
+      ageInYears:3,
+      state:'STÉRILISÉ'
     },
     {id:4,
       name:'KAYEN',
       isMale:true,
-      image:'/src/assets/animal-default.png'
+      image:'/src/assets/animal-default.png',
+      species:'DOG',
+      race:'GOLDEN RETRIVER',
+      ageInYears:3,
+      state:'STÉRILISÉ'
     },
     {id:5,
       name:'KAYEN',
       isMale:true,
-      image:'/src/assets/animal-default.png'
+      image:'/src/assets/animal-default.png',
+      species:'DOG',
+      race:'GOLDEN RETRIVER',
+      ageInYears:3,
+      state:'STÉRILISÉ'
     },
     {id:6,
       name:'KAYEN',
       isMale:true,
-      image:'/src/assets/animal-default.png'
+      image:'/src/assets/animal-default.png',
+      species:'DOG',
+      race:'GOLDEN RETRIVER',
+      ageInYears:3,
+      state:'STÉRILISÉ'
     },
     {id:7,
       name:'KAYEN',
       isMale:true,
-      image:'/src/assets/animal-default.png'
+      image:'/src/assets/animal-default.png',
+      species:'DOG',
+      race:'GOLDEN RETRIVER',
+      ageInYears:3,
+      state:'STÉRILISÉ'
     },
     {id:8,
       name:'KAYEN',
       isMale:true,
-      image:'/src/assets/animal-default.png'
+      image:'/src/assets/animal-default.png',
+      species:'DOG',
+      race:'GOLDEN RETRIVER',
+      ageInYears:3,
+      state:'STÉRILISÉ'
     },
     {id:9,
       name:'KAYEN',
       isMale:true,
-      image:'/src/assets/animal-default.png'
+      image:'/src/assets/animal-default.png',
+      species:'DOG',
+      race:'GOLDEN RETRIVER',
+      ageInYears:3,
+      state:'STÉRILISÉ'
     },
     {id:10,
       name:'KAYEN',
       isMale:true,
-      image:'/src/assets/animal-default.png'
+      image:'/src/assets/animal-default.png',
+      species:'DOG',
+      race:'GOLDEN RETRIVER',
+      ageInYears:3,
+      state:'STÉRILISÉ'
     },
     {id:11,
       name:'KAYEN',
       isMale:true,
-      image:'/src/assets/animal-default.png'
-    },
+      image:'/src/assets/animal-default.png',
+      species:'DOG',
+      race:'GOLDEN RETRIVER',
+      ageInYears:3,
+      state:'STÉRILISÉ'
+    }
   ]
   
   return (
     <div className="App">
-      {/* <Chart props={props} /> */}
-      {/* <EventsCalendar />  */}
-      {/* <EventsCalendarPage events={events} /> */}
-      {/*<ThemeProvider theme={theme}>
-        <CssBaseline />
+      {/* <Chart props={props} /> 
+      <EventsCalendar />  
+      <EventsCalendarPage events={events} /> */}
+      <ThemeProvider theme={theme}>
+      <CssBaseline />
         <Router>
           <Routes>
             <Route path="/" element={<Login />} />
@@ -380,11 +428,11 @@ function App() {
             />
             <Route path="/todo" element={<ToDoPage toDoTasks={toDoTasks} />} />
             <Route path="/articles" element={<ArticlesPage/>} />
-            <Route path="/animals" element={<Animals animals={animals}/>} />
+            <Route path="/animals" element={<Animals animalList={animals}/>} />
           </Routes>
         </Router>
-      </ThemeProvider>*/}
-        <CommandsFrontPage />
+      </ThemeProvider>
+        {/* <CommandsFrontPage /> */}
     </div>
   );
 }
