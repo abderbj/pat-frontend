@@ -15,6 +15,7 @@ import ToDoPage from "./pages/ToDo";
 import Dashboard from './DashboardLayout/Dashboard';
 import Animals from './pages/Animals';
 import CommandsFrontPage from './components/CommandsFrontPage';
+import Team from './pages/Team';
 const theme = createTheme({
   typography: {
     fontFamily: "Manrope, sans-serif",
@@ -298,6 +299,105 @@ function App() {
      }
   ]
 
+  const team = [
+    {id:0,
+      firstName:'PETER',
+      lastName:'PRICE',
+      email:'JANICK_PARISIAN@YAHOO.COM',
+      isMale:false,
+      phoneNumber:54845847,
+      post:'CEO'
+    },
+    {id:1,
+      firstName:'PETER',
+      lastName:'PRICE',
+      email:'JANICK_PARISIAN@YAHOO.COM',
+      isMale:false,
+      phoneNumber:54845847,
+      post:'CEO'
+    },
+    {id:2,
+      firstName:'PETER',
+      lastName:'PRICE',
+      email:'JANICK_PARISIAN@YAHOO.COM',
+      isMale:false,
+      phoneNumber:54845847,
+      post:'CEO'
+    },
+    {id:3,
+      firstName:'PETER',
+      lastName:'PRICE',
+      email:'JANICK_PARISIAN@YAHOO.COM',
+      isMale:false,
+      phoneNumber:54845847,
+      post:'CEO'
+    },
+    {id:4,
+      firstName:'PETER',
+      lastName:'PRICE',
+      email:'JANICK_PARISIAN@YAHOO.COM',
+      isMale:false,
+      phoneNumber:54845847,
+      post:'CEO'
+    },
+    {id:5,
+      firstName:'PETER',
+      lastName:'PRICE',
+      email:'JANICK_PARISIAN@YAHOO.COM',
+      isMale:false,
+      phoneNumber:54845847,
+      post:'CEO'
+    },
+    {id:6,
+      firstName:'PETER',
+      lastName:'PRICE',
+      email:'JANICK_PARISIAN@YAHOO.COM',
+      isMale:false,
+      phoneNumber:54845847,
+      post:'CEO'
+    },
+    {id:7,
+      firstName:'PETER',
+      lastName:'PRICE',
+      email:'JANICK_PARISIAN@YAHOO.COM',
+      isMale:false,
+      phoneNumber:54845847,
+      post:'CEO'
+    },
+    {id:8,
+      firstName:'PETER',
+      lastName:'PRICE',
+      email:'JANICK_PARISIAN@YAHOO.COM',
+      isMale:false,
+      phoneNumber:54845847,
+      post:'CEO'
+    },
+    {id:9,
+      firstName:'PETER',
+      lastName:'PRICE',
+      email:'JANICK_PARISIAN@YAHOO.COM',
+      isMale:false,
+      phoneNumber:54845847,
+      post:'CEO'
+    },
+    {id:10,
+      firstName:'PETER',
+      lastName:'PRICE',
+      email:'JANICK_PARISIAN@YAHOO.COM',
+      isMale:false,
+      phoneNumber:54845847,
+      post:'CEO'
+    },
+    {id:11,
+      firstName:'PETER',
+      lastName:'PRICE',
+      email:'JANICK_PARISIAN@YAHOO.COM',
+      isMale:false,
+      phoneNumber:54845847,
+      post:'CEO'
+    }
+  ]
+
   const animals = [
     {id:0,
       name:'PETER',
@@ -429,6 +529,7 @@ function App() {
             <Route path="/todo" element={<ToDoPage toDoTasks={toDoTasks} />} />
             <Route path="/articles" element={<ArticlesPage/>} />
             <Route path="/animals" element={<Animals animalList={animals}/>} />
+            <Route path="/team" element={<Team teamList={team}/>} />
           </Routes>
         </Router>
       </ThemeProvider>
