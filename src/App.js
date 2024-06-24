@@ -16,6 +16,7 @@ import Dashboard from './DashboardLayout/Dashboard';
 import Animals from './pages/Animals';
 import CommandsFrontPage from './components/CommandsFrontPage';
 import Team from './pages/Team';
+import Volunteers from './pages/Volunteers';
 const theme = createTheme({
   typography: {
     fontFamily: "Manrope, sans-serif",
@@ -530,6 +531,7 @@ function App() {
             <Route path="/articles" element={<ArticlesPage/>} />
             <Route path="/animals" element={<Animals animalList={animals}/>} />
             <Route path="/team" element={<Team teamList={team}/>} />
+            <Route path="/volunteers" element={<Volunteers teamList={team}/>} />
           </Routes>
         </Router>
       </ThemeProvider>
