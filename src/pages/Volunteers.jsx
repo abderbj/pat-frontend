@@ -46,7 +46,7 @@ export default function Volunteers({ teamList }) {
     return (
         <Box bgcolor={"#F5F6FA"}>
             <Box display={'flex'} alignItems={'center'} justifyContent={'space-between'} p={2} paddingBlockEnd={5}>
-                <Typography variant='h5' fontWeight={'bold'}>{team.selectedTeamMember === -1 ? 'Equipe' : "Profile du membre"}</Typography>
+                <Typography variant='h5' fontWeight={'bold'}>{team.selectedTeamMember === -1 ? 'Bénévoles' : "Profile du bénévole"}</Typography>
                 {team.selectedTeamMember === -1 ?
                     <Box display={'flex'} flexWrap={'wrap'} alignItems={'center'} gap={5}>
                         <Button
@@ -59,7 +59,7 @@ export default function Volunteers({ teamList }) {
                             disableElevation
                             variant='contained'
                         >
-                            Ajouter un membre
+                            Ajouter un bénévole
                         </Button>
                         {/* <TextField
                             id="outlined-basic"
