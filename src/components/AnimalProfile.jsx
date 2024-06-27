@@ -4,6 +4,8 @@ import DeleteOutlinedIcon from '@mui/icons-material/DeleteOutlined';
 import defaultAnimalImage from '../assets/animal-default.png';
 import AnimalInformation from "./AnimalInformation";
 export default function AnimalProfile({animalData,onDelete}) {
+    console.log("hi")
+    console.log(animalData);
     function deleteAnimalHandler(){
         onDelete(animalData.id);
     }
@@ -14,10 +16,10 @@ export default function AnimalProfile({animalData,onDelete}) {
         <Box>
             <AnimalInformation label={"NOM"} value={animalData.name}></AnimalInformation>
             <AnimalInformation label={"ESPÈCES"} value={animalData.species}></AnimalInformation>
-            <AnimalInformation label={"RACES/APPARENCE"} value={animalData.race}></AnimalInformation>
-            <AnimalInformation label={"SEXE"} value={+animalData.isMale ? "MALE" : "FEMELLE"}></AnimalInformation>
-            <AnimalInformation label={"ÂGE"} value={animalData.ageInYears} age></AnimalInformation>
-            <AnimalInformation label={"ÉTAT"} value={animalData.state}></AnimalInformation>
+            <AnimalInformation label={"RACES/APPARENCE"} value={animalData.breed}></AnimalInformation>
+            <AnimalInformation label={"SEXE"} value={animalData.gender }></AnimalInformation>
+            <AnimalInformation label={"ÂGE"} value={animalData.age} age></AnimalInformation>
+            <AnimalInformation label={"ÉTAT"} value={animalData.status}></AnimalInformation>
 
             <ButtonGroup color={"secondary"} variant="contained" disableElevation>
                 <Button><ModeOutlinedIcon sx={{ width:25, height:20 }} /></Button>

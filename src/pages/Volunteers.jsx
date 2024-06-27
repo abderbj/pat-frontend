@@ -6,11 +6,15 @@ import { useState } from 'react';
 
 import VolunteerCard from '../components/VolunteerCard';
 import VolunteerProfile from '../components/VolunteerProfile';
+import useFetchData from '../hooks/useFetchData';
 
 export default function Volunteers({ teamList }) {
-    const [team, setTeam] = useState({ teamList: teamList, selectedTeamMember: -1 });
+    const [team, setTeam] = useState({ teamList: [], selectedTeamMember: -1 });
+    function getTeam(data){
+        setTeam({teamList:data,selectedTeamMember:-1});
+    }
     /* const [searchInput, setSearchInput] = useState(""); */
-
+    useFetchData("http://localhost:5000/volunteer","GET",getTeam);
     const deleteTeamMember = (id) => {
         const newTeam = team.teamList.filter((teamMember) => teamMember.id !== id);
         setTeam({

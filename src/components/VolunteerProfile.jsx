@@ -14,7 +14,7 @@ export default function VolunteerProfile({teamMemberData,onDelete}) {
             <VolunteerInformation label={"NOM"} value={teamMemberData.lastName}></VolunteerInformation>
             <VolunteerInformation label={"PRÉNOM"} value={teamMemberData.firstName}></VolunteerInformation>
             <VolunteerInformation label={"EMAIL"} value={teamMemberData.email}></VolunteerInformation>
-            <VolunteerInformation label={"NUMÉRO"} value={teamMemberData.phoneNumber}></VolunteerInformation>
+            <VolunteerInformation label={"NUMÉRO"} value={teamMemberData.phone}></VolunteerInformation>
             
 
             <ButtonGroup color={"secondary"} variant="contained" disableElevation>

@@ -7,7 +7,7 @@ export default function AnimalCard({animalData,setSelectedAnimal}){
     function editAnimal(){
         setSelectedAnimal(animalData.id);
     }
-
+    console.log(animalData)
     return(
         <Card onClick={editAnimal} elevation={10} sx={{borderRadius:3,minWidth:'150px'}} variant='elevation'>
             <CardMedia image={defaultAnimalImage}
@@ -15,7 +15,7 @@ export default function AnimalCard({animalData,setSelectedAnimal}){
             <CardContent>
                 <Box sx={{display:'flex', justifyContent:'center'}}>
                     <Typography gutterBottom variant="h5" component="div">{animalData.name}</Typography>
-                    {animalData.isMale ? <MaleIcon/>:<FemaleIcon/>}
+                    {animalData.gender.toLowerCase() === "malle" ? <MaleIcon/>:<FemaleIcon/>}
                 </Box>
       </CardContent>
         </Card>

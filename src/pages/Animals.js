@@ -4,11 +4,14 @@ import AnimalCard from '../components/AnimalCard';
 import defaultAnimalImage from '../assets/animal-default.png';
 import { useState } from 'react';
 import AnimalProfile from '../components/AnimalProfile';
-
+import useFetchData from '../hooks/useFetchData';
 export default function Animals({ animalList }) {
-    const [animals, setAnimals] = useState({ animalList: animalList, selectedAnimal: -1 });
+    const [animals, setAnimals] = useState({animalList:[],selectedAnimal:-1});
     const [searchInput, setSearchInput] = useState("");
-
+    function getAniamls(data){
+        setAnimals({animalList:data,selectedAnimal:-1});
+    }
+    useFetchData("http://localhost:5000/animal","GET",getAniamls);
     const deleteAnimal = (id) => {
         const newAnimals = animals.animalList.filter((animal) => animal.id !== id);
         setAnimals({
@@ -21,15 +24,20 @@ export default function Animals({ animalList }) {
         const lowerCaseInput = event.target.value.toLowerCase();
         setSearchInput(lowerCaseInput);
     };
+    let searchResultAnimals = animals.animalList; // Initialize with animals.animalList
 
-    const searchResultAnimals = animals.animalList.filter((animal) => {
+if (animals.animalList) { // Check if animals.animalList exists and is not falsy
+    searchResultAnimals = animals.animalList.filter((animal) => {
         if (searchInput === '') {
             return true; // Include all animals if search input is empty
         } else {
             return animal.name.toLowerCase().includes(searchInput);
         }
     });
-
+} else {
+    searchResultAnimals = []; // Initialize as empty array if animals.animalList is falsy
+}
+    console.log(searchResultAnimals)
     const findAnimalById = (id) => {
         return animals.animalList.find(animal => animal.id === id);
     };

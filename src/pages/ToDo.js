@@ -1,12 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import { Box, Typography, Button } from '@mui/material';
 import ToDoTask from '../components/ToDoTask';
+import useFetchData from '../hooks/useFetchData';
 
 function ToDo({ toDoTasks }) {
 
     const [selectedTask, setSelectedTask] = useState(-1);
-    const [tasks, setTasks] = useState(toDoTasks);
-
+    const [tasks, setTasks] = useState([]);
+    useFetchData("http://localhost:5000/task","GET",setTasks);
     const deleteTask = (id) => {
         const newTasks = tasks.filter((task) => task.id !== id);
         setTasks(newTasks);
